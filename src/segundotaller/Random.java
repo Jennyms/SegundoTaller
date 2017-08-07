@@ -80,14 +80,12 @@ public class Random extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(columnas, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(50, 50, 50)
-                                .addComponent(generarnumeros))))
+                                .addComponent(generarnumeros))
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 484, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(235, 235, 235)
-                        .addComponent(jLabel1))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(45, 45, 45)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(57, Short.MAX_VALUE))
+                        .addComponent(jLabel1)))
+                .addContainerGap(39, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -103,13 +101,13 @@ public class Random extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel3)
-                            .addComponent(columnas, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(104, 104, 104)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(columnas, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(3, 3, 3)
                         .addComponent(generarnumeros)))
-                .addContainerGap(247, Short.MAX_VALUE))
+                .addGap(104, 104, 104)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 287, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(65, Short.MAX_VALUE))
         );
 
         pack();
@@ -117,27 +115,22 @@ public class Random extends javax.swing.JFrame {
 
     private void generarnumerosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_generarnumerosActionPerformed
         // TODO add your handling code here:
-
         int FILAS = Integer.valueOf(filas.getText());
         int COLUMNAS = Integer.valueOf(columnas.getText());
         int i, j;
-        String columna = "";
-        columna ="";
         String[][] A = new String[FILAS][COLUMNAS];
-        for (i = 0; i < FILAS; i++) {
+        for (i = 0; i < FILAS; i++) {          
+                
             for (j = 0; j < COLUMNAS; j++) {
-
-                A[i][j] = String.valueOf((int) (Math.random() * 20+1));
+                A[i][j] = String.valueOf((int) (Math.random() * 20+1)); 
             }
         }
-        
         tabla.setModel(new javax.swing.table.DefaultTableModel(
                 A,
                 new String[]{
-                    "","",""
-                   
+                    "","","","","","","","","","","","","","","","","","","","",""               
                 }
-        ));
+        )); 
     }//GEN-LAST:event_generarnumerosActionPerformed
 
     /**
